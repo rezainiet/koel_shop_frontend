@@ -9,7 +9,7 @@ import img2 from "../img/NEW-slider-02.jpg"
 import img3 from "../img/NEW-slider-03.jpg"
 import img4 from "../img/NEW-slider-04.jpg"
 
-const GlideSlider = () => {
+const Carousel = () => {
     const glideRef = useRef(null);
 
     useEffect(() => {
@@ -17,17 +17,17 @@ const GlideSlider = () => {
             const glide = new Glide(glideRef.current, {
                 type: 'carousel',
                 focusAt: 'center',
-                perView: 1,
+                perView: 2,
                 autoplay: 2000, // Autoplay every 3000ms (3 seconds)
                 breakpoints: {
                     640: {
                         perView: 1,
                     },
                     768: {
-                        perView: 1,
+                        perView: 2,
                     },
                     1024: {
-                        perView: 1,
+                        perView: 3,
                     },
                 },
             }).mount();
@@ -87,10 +87,11 @@ const GlideSlider = () => {
                 <button className="glide__bullet" data-glide-dir="=0"></button>
                 <button className="glide__bullet" data-glide-dir="=1"></button>
                 <button className="glide__bullet" data-glide-dir="=2"></button>
+                <button className="glide__bullet" data-glide-dir="=3"></button>
                 {/* Add more bullets as needed */}
             </div>
         </div>
     );
 };
 
-export default GlideSlider;
+export default Carousel;

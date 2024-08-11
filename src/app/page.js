@@ -1,4 +1,5 @@
 import Carousel from "@/components/Carousel";
+import CompanyStatistics from "@/components/CompanyStatistics";
 import Navbar from "@/components/Navbar";
 import OurConcern from "@/components/OurConcern";
 import OurSpeciality from "@/components/OurSpeciality";
@@ -12,6 +13,7 @@ export default function Home() {
       <VideoToAction />
       <OurSpeciality />
       <OurConcern />
+      <CompanyStatistics />
     </main>
   );
 }
